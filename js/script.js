@@ -1,66 +1,90 @@
-const btnModo = document.getElementById("modoEscuro");
+const botaoModoEscuro = document.getElementById("modoEscuro");
 
-if(btnModo){
+const temaSalvo = localStorage.getItem("preferencia-tema");
 
-    btnModo.addEventListener("click", () => {
+if (temaSalvo === "escuro") {
+
+    document.body.classList.add("modoEscuro");
+
+}
+
+if (botaoModoEscuro) {
+
+    botaoModoEscuro.addEventListener("click", () => {
 
         document.body.classList.toggle("modoEscuro");
 
+        if (document.body.classList.contains("modoEscuro")) {
+
+            localStorage.setItem("preferencia-tema", "escuro");
+
+        }
+        else {
+
+            localStorage.setItem("preferencia-tema", "claro");
+
+        }
+
     });
 
 }
 
-const btnMais = document.getElementById("AumentarFonte");
-const btnMenos = document.getElementById("DiminuirFonte");
+const botaoAumentar = document.getElementById("AumentarFonte");
+const botaoDiminuir = document.getElementById("DiminuirFonte");
 
 let tamanhoFonte = 16;
 
-if(btnMais && btnMenos){
+if (botaoAumentar && botaoDiminuir) {
 
-    btnMais.addEventListener("click", () => {
+    botaoAumentar.addEventListener("click", () => {
 
-    if(tamanhoFonte < 30){
+        if (tamanhoFonte < 30) {
 
-        tamanhoFonte += 2;
-        document.body.style.fontSize = tamanhoFonte + "px";
+            tamanhoFonte += 2;
+            document.body.style.fontSize = tamanhoFonte + "px";
 
-    }
+        }
 
     });
 
-    btnMenos.addEventListener("click", () => {
+    botaoDiminuir.addEventListener("click", () => {
 
-        tamanhoFonte -= 2;
-        document.body.style.fontSize = tamanhoFonte + "px";
+        if (tamanhoFonte > 12) {
+
+            tamanhoFonte -= 2;
+            document.body.style.fontSize = tamanhoFonte + "px";
+
+        }
 
     });
 
 }
 
-const formulario = document.getElementById("formularioContato");
-const mensagem = document.getElementById("mensagemFormulario");
+const formularioContato = document.getElementById("formularioContato");
+const mensagemFormulario = document.getElementById("mensagemFormulario");
 
-if(formulario){
+if (formularioContato) {
 
-    formulario.addEventListener("submit", (evento) => {
+    formularioContato.addEventListener("submit", (evento) => {
 
         evento.preventDefault();
 
         const nome = document.getElementById("nome").value;
         const email = document.getElementById("email").value;
+        const mensagem = document.getElementById("mensagem").value;
 
-        if(nome.trim() === "" || email.trim() === ""){
+        if (nome.trim() === "" ||email.trim() === "" ||mensagem.value.trim() === "") {
 
-            mensagem.textContent = "Por favor, preencha todos os campos.";
-            mensagem.style.color = "red";
+            mensagemFormulario.textContent = "Por favor, preencha todos os campos.";
+            mensagemFormulario.style.color = "red";
 
         }
-        else{
+        else {
 
-            mensagem.textContent = "Formulário enviado com sucesso!";
-            mensagem.style.color = "green";
+            mensagemFormulario.textContent = "Formulário enviado com sucesso!";
+            mensagemFormulario.style.color = "green";
 
-            formulario.reset();
+            formularioContato.reset();
 
         }
 
