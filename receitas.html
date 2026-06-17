@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog - Receitas Favoritas</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <style>
+
+        .lista-receitas{
+            list-style: none;
+            padding: 0;
+            margin: 2rem auto 0 auto;
+            max-width: 500px;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .lista-receitas li{
+            background-color: var(--bg-color);
+            border: 1px solid var(--borda-caixa);
+            border-radius: 8px;
+            padding: 1rem;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.2s;
+            cursor: pointer;
+        }
+
+        .lista-receitas li:hover{
+            background-color: rgba(128, 0, 32, 0.08);
+        }
+
+        .modoEscuro .lista-receitas li:hover{
+            background-color: rgba(128, 0, 32, 0.25);
+        }
+
+        .lista-receitas a{
+            width: 100%;
+            text-align: center;
+            text-decoration: none;
+            color: var(--nav-bg);
+            display: block;
+        }
+
+        .modoEscuro .lista-receitas a{
+            color: #ff4d6d;
+        }
+
+        .texto-simples{
+            color: var(--text-color);
+            opacity: 0.8;
+            cursor: default;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="barraDeCima">
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre Mim</a></li>
+                <li><a href="curriculum.html">Currículo</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+            </ul>
+        </nav>
+
+        <div class="botoes">
+            <button id="modoEscuro">Modo Noturno</button>
+            <button id="AumentarFonte">A+</button>
+            <button id="DiminuirFonte">A-</button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+
+            <h1>Minhas Receitas Favoritas</h1>
+
+            <p style="text-align: center;">
+                Selecione uma das minhas receitas favoritas abaixo para ver os detalhes:
+            </p>
+
+            <ul class="lista-receitas">
+
+                <li>
+                    <a href="mousse-maracuja.html">
+                        <strong>Mousse de Maracujá</strong>
+                    </a>
+                </li>
+
+                <li>
+                    <span class="texto-simples">
+                        Bife à Parmegiana
+                    </span>
+                </li>
+
+                <li>
+                    <span class="texto-simples">
+                        Entrevero
+                    </span>
+                </li>
+
+                <li>
+                    <span class="texto-simples">
+                        Hambúrguer Caseiro
+                    </span>
+                </li>
+
+            </ul>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

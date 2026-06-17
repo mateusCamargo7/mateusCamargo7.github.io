@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog - Currículo</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <style>
+
+        .tabela-curriculo{
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        .tabela-curriculo th,
+        .tabela-curriculo td{
+            border: 1px solid var(--borda-caixa);
+            padding: 12px;
+            text-align: left;
+        }
+
+        .tabela-curriculo th{
+            background-color: var(--nav-bg);
+            color: var(--nav-text);
+        }
+
+        .tabela-curriculo tbody tr:nth-child(even){
+            background-color: rgba(0, 0, 0, 0.02);
+        }
+
+        .modoEscuro .tabela-curriculo tbody tr:nth-child(even){
+            background-color: rgba(255, 255, 255, 0.03);
+        }
+
+        .lista-experiencias{
+            padding-left: 20px;
+        }
+
+        .lista-experiencias li{
+            margin-bottom: 10px;
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="barraDeCima">
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre Mim</a></li>
+                <li><a href="curriculum.html">Currículo</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+            </ul>
+        </nav>
+
+        <div class="botoes">
+            <button id="modoEscuro">Modo Noturno</button>
+            <button id="AumentarFonte">A+</button>
+            <button id="DiminuirFonte">A-</button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+
+            <h1>Meu Currículo</h1>
+
+            <h2>Experiências Profissionais</h2>
+
+            <ul class="lista-experiencias">
+                <li>
+                    <strong>Pibic Júnior Administração UPF (2025)</strong>
+                    - UPF (2025)
+                </li>
+
+                <li>
+                    <strong>Monitor Volante Projeto Tempo Integral</strong>
+                    - UPF (2026)
+                </li>
+            </ul>
+
+            <h2>Formação Acadêmica e Competências</h2>
+
+            <table class="tabela-curriculo">
+
+                <thead>
+                    <tr>
+                        <th>Instituição</th>
+                        <th>Nível / Curso</th>
+                        <th>Ano</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+
+                    <tr>
+                        <td>Universidade de Passo Fundo (UPF)</td>
+                        <td>Ciência da Computação</td>
+                        <td>2026 - 2029</td>
+                    </tr>
+
+                    <tr>
+                        <td>Integrado UPF</td>
+                        <td>Ensino Médio</td>
+                        <td>2023 - 2025</td>
+                    </tr>
+
+                </tbody>
+
+            </table>
+
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>

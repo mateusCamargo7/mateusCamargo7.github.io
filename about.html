@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Blog - Sobre Mim</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+
+    <style>
+
+        .container-foto{
+            text-align: center;
+            margin: 1.5rem 0;
+        }
+
+        .foto-perfil{
+            max-width: 200px;
+            border-radius: 12px;
+            border: 2px solid var(--borda-caixa);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <header class="barraDeCima">
+
+        <nav>
+            <ul class="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">Sobre Mim</a></li>
+                <li><a href="curriculum.html">Currículo</a></li>
+                <li><a href="contact.html">Contato</a></li>
+                <li><a href="receitas.html">Receitas</a></li>
+            </ul>
+        </nav>
+
+        <div class="botoes">
+            <button id="modoEscuro">Modo Noturno</button>
+            <button id="AumentarFonte">A+</button>
+            <button id="DiminuirFonte">A-</button>
+        </div>
+
+    </header>
+
+    <main>
+
+        <section class="intro">
+
+            <h1>Sobre Mim</h1>
+
+            <div class="container-foto">
+                <img
+                    src="Assets/foto_sobre_mim.jpg"
+                    alt="Minha foto de perfil"
+                    class="foto-perfil"
+                >
+            </div>
+
+            <h2>Minha Trajetória</h2>
+
+            <p>
+                Meu nome é Mateus Rocha Camargo e sou estudante de Ciência da Computação na Universidade de Passo Fundo (UPF).
+                Cursei o ensino médio no Integrado como bolsista integral e, hoje, sou bolsista
+                100% do ProUni graças ao meu desempenho no ENEM de 2025.
+            </p>
+
+            <p>
+                Atualmente, atuo como monitor volante no projeto Tempo Integral,
+                onde ajudamos crianças de bairros vulneráveis a se conectarem com a educação
+                e a alcançarem melhores oportunidades de vida.
+            </p>
+
+            <p>
+                Busco me aprimorar no desenvolvimento Front-end e Back-end,
+                e tenho grande interesse em projetos de pesquisa e oportunidades
+                de estágio na área de tecnologia.
+            </p>
+        </section>
+
+    </main>
+
+    <script src="js/script.js"></script>
+
+</body>
+</html>
