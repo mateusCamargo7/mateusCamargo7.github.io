@@ -1,17 +1,21 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Meu Blog - Home</title>
+
     <link rel="stylesheet" href="css/style.css">
-    
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap" rel="stylesheet">
 </head>
+
 <body>
     <header class="barraDeCima">
+
         <nav>
             <ul class="menu">
                 <li><a href="index.html">Home</a></li>
@@ -21,48 +25,75 @@
                 <li><a href="receitas.html">Receitas</a></li>
             </ul>
         </nav>
-        
+
         <div class="botoes">
             <button id="modoEscuro">Modo Noturno</button>
             <button id="AumentarFonte">A+</button>
             <button id="DiminuirFonte">A-</button>
         </div>
+
     </header>
 
     <main>
+
         <section class="intro">
+
             <h1>Bem-vindo ao Meu Blog</h1>
-            <p>Olá meu nome é Mateus Rocha Camargo e este é o meu Blog contruido para as atividades finais de WebLab. aqui compartilharei um pouco da minha
-                 trajetória acadêmica e interesses.<br><br>Aqui você verá receitas, estudos e alguns fatos sobre mim. 
-                 Caso queira entrar em contato, acesse a aba "Contato" do Blog e insira suas informações.</p>
+
+            <p>
+                Olá meu nome é Mateus Rocha Camargo e este é o meu Blog construído para as atividades finais de WebLab.
+                Aqui compartilharei um pouco da minha trajetória acadêmica e interesses.
+                <br><br>
+                Aqui você verá receitas, estudos e alguns fatos sobre mim.
+                Caso queira entrar em contato, acesse a aba "Contato" do Blog e insira suas informações.
+            </p>
+
         </section>
 
+        
         <section class="feed">
+
             <h2>Últimas Postagens</h2>
-            
+
             <div class="fotoFeed">
+
                 
                 <article class="PostdeFoto">
-                    <!-- Corrigido: Sintaxe da imagem ajustada com o atributo alt isolado -->
-                    <img src="Assets/bife-a-parmegiana.jpg" alt="Imagem da postagem sobre HTML" class="feed-image">
-                    
+
+                    <img
+                        src="Assets/bife-a-parmegiana.jpg"
+                        alt="Imagem da postagem sobre HTML"
+                        class="feed-image"
+                    >
+
                     <div class="TextodeFeed">
                         <p>Receita Bife à Parmegiana.</p>
                     </div>
+
                 </article>
 
+                
                 <article class="PostdeFoto">
-                    <img src="assets/post2.jpg" alt="Imagem da postagem sobre CSS" class="feed-image">
-                    
+
+                    <img
+                        src="Assets/upf.jpg"
+                        alt="Imagem da postagem sobre entrada"
+                        class="feed-image"
+                    >
+
                     <div class="TextodeFeed">
-                        <p>Como usar JavaScript e Css em seus projetos HTML.</p>
+                        <p>Como conquistei minha vaga em Ciência da Computação na UPF.</p>
                     </div>
+
                 </article>
 
             </div>
+
         </section>
+
     </main>
 
     <script src="js/script.js"></script>
+
 </body>
 </html>

@@ -1,27 +1,27 @@
 :root{
-    --bg-color: #f7f7f7;
-    --text-color: #1a1a1a;
-    --nav-bg: #800020;
-    --nav-text: #ffffff;
-    --card-bg: #ffffff;
-    --btn-bg: #b30000;
+    --cor-fundo: #f7f7f7;
+    --cor-texto: #1a1a1a;
+    --cor-menu: #800020;
+    --cor-texto-menu: #ffffff;
+    --cor-cartao: #ffffff;
+    --cor-botao: #b30000;
     --borda-caixa: #800020;
     --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .modoEscuro{
-    --bg-color: #121212;
-    --text-color: #f0f0f0;
-    --nav-bg: #000000;
-    --card-bg: #1e1e1e;
-    --btn-bg: #800020;
+    --cor-fundo: #121212;
+    --cor-texto: #f0f0f0;
+    --cor-menu: #000000;
+    --cor-cartao: #1e1e1e;
+    --cor-botao: #800020;
     --borda-caixa: #800020;
     --sombra: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 body{
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
     font-family: "Fjalla One", sans-serif;
     margin: 0;
     padding: 0;
@@ -49,7 +49,7 @@ h2{
 }
 
 button{
-    background-color: var(--btn-bg);
+    background-color: var(--cor-botao);
     color: white;
     border: none;
     border-radius: 4px;
@@ -67,7 +67,7 @@ button:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: var(--nav-bg);
+    background-color: var(--cor-menu);
     padding: 1rem 2rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
@@ -81,7 +81,7 @@ button:hover{
 }
 
 .menu a{
-    color: var(--nav-text);
+    color: var(--cor-texto-menu);
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
@@ -97,7 +97,7 @@ button:hover{
 }
 
 .intro{
-    background-color: var(--card-bg);
+    background-color: var(--cor-cartao);
     border: 2px solid var(--borda-caixa);
     border-radius: 12px;
     padding: 2rem;
@@ -115,7 +115,7 @@ button:hover{
 }
 
 .PostdeFoto{
-    background-color: var(--card-bg);
+    background-color: var(--cor-cartao);
     border: 2px solid var(--borda-caixa);
     border-radius: 12px;
     overflow: hidden;
@@ -138,7 +138,7 @@ button:hover{
 
 .TextodeFeed{
     padding: 20px;
-    background-color: var(--card-bg);
+    background-color: var(--cor-cartao);
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -157,7 +157,7 @@ button:hover{
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    background-color: var(--card-bg);
+    background-color: var(--cor-cartao);
     padding: 2rem;
     border-radius: 12px;
     border: 2px solid var(--borda-caixa);
@@ -166,16 +166,47 @@ button:hover{
     margin: 0 auto;
 }
 
+.caixa-contato{
+    max-width: 600px;
+    margin: 0 auto 3rem auto;
+}
+
+.formulario-inputs{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1.2rem;
+    text-align: left;
+}
+
+.formulario-inputs label{
+    font-weight: bold;
+}
+        
+.formulario-inputs textarea{
+    width: 100%;
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    font-family: inherit;
+    resize: vertical;
+    box-sizing: border-box;
+}
+
 .contact-form input{
     padding: 0.7rem;
     font-size: 1rem;
     border: 1px solid #ccc;
     border-radius: 6px;
-    background-color: var(--bg-color);
-    color: var(--text-color);
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
 }
 
-.lista-receitas{
+
+.listaReceitas{
     list-style: none;
     padding: 0;
     margin: 2rem auto 0 auto;
@@ -185,8 +216,8 @@ button:hover{
     gap: 1rem;
 }
 
-.lista-receitas li{
-    background-color: var(--bg-color);
+.listaReceitas li{
+    background-color: var(--cor-fundo);
     border: 1px solid var(--borda-caixa);
     border-radius: 8px;
     padding: 1rem;
@@ -198,28 +229,28 @@ button:hover{
     cursor: pointer;
 }
 
-.lista-receitas li:hover{
+.listaReceitas li:hover{
     background-color: rgba(128, 0, 32, 0.08);
 }
 
-.modoEscuro .lista-receitas li:hover{
+.modoEscuro .listaReceitas li:hover{
     background-color: rgba(128, 0, 32, 0.25);
 }
 
-.lista-receitas a{
-    color: var(--nav-bg);
+.listaReceitas a{
+    color: var(--cor-menu);
     text-decoration: none;
     width: 100%;
     text-align: center;
     display: block;
 }
 
-.modoEscuro .lista-receitas a{
+.modoEscuro .listaReceitas a{
     color: #ff4d6d;
 }
 
-.lista-receitas .texto-simples{
-    color: var(--text-color);
+.listaReceitas .texto-simples{
+    color: var(--cor-texto);
     font-weight: normal;
     opacity: 0.8;
     cursor: default;
