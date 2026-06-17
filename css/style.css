@@ -1,0 +1,226 @@
+:root{
+    --bg-color: #f7f7f7;
+    --text-color: #1a1a1a;
+    --nav-bg: #800020;
+    --nav-text: #ffffff;
+    --card-bg: #ffffff;
+    --btn-bg: #b30000;
+    --borda-caixa: #800020;
+    --sombra: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.modoEscuro{
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --nav-bg: #000000;
+    --card-bg: #1e1e1e;
+    --btn-bg: #800020;
+    --borda-caixa: #800020;
+    --sombra: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+body{
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: "Fjalla One", sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+main{
+    padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section{
+    width: 100%;
+}
+
+h1,
+h2{
+    text-align: center;
+    margin-top: 0;
+}
+
+button{
+    background-color: var(--btn-bg);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-weight: bold;
+    padding: 0.6rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, opacity 0.3s;
+}
+
+button:hover{
+    opacity: 0.8;
+}
+
+.barraDeCima{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--nav-bg);
+    padding: 1rem 2rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.menu{
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu a{
+    color: var(--nav-text);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.menu a:hover{
+    opacity: 0.8;
+}
+
+.botoes{
+    display: flex;
+    gap: 0.5rem;
+}
+
+.intro{
+    background-color: var(--card-bg);
+    border: 2px solid var(--borda-caixa);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: var(--sombra);
+    margin-bottom: 3rem;
+    box-sizing: border-box;
+}
+
+.fotoFeed{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 1.5rem;
+    width: 100%;
+}
+
+.PostdeFoto{
+    background-color: var(--card-bg);
+    border: 2px solid var(--borda-caixa);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--sombra);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s;
+}
+
+.PostdeFoto:hover{
+    transform: translateY(-4px);
+}
+
+.feed-image{
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    display: block;
+}
+
+.TextodeFeed{
+    padding: 20px;
+    background-color: var(--card-bg);
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.TextodeFeed p{
+    margin: 0;
+    font-size: 1rem;
+    line-height: 1.4;
+    text-align: center;
+    font-weight: 500;
+}
+
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    background-color: var(--card-bg);
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid var(--borda-caixa);
+    box-shadow: var(--sombra);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.contact-form input{
+    padding: 0.7rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+.lista-receitas{
+    list-style: none;
+    padding: 0;
+    margin: 2rem auto 0 auto;
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.lista-receitas li{
+    background-color: var(--bg-color);
+    border: 1px solid var(--borda-caixa);
+    border-radius: 8px;
+    padding: 1rem;
+    font-size: 1.1rem;
+    transition: background-color 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.lista-receitas li:hover{
+    background-color: rgba(128, 0, 32, 0.08);
+}
+
+.modoEscuro .lista-receitas li:hover{
+    background-color: rgba(128, 0, 32, 0.25);
+}
+
+.lista-receitas a{
+    color: var(--nav-bg);
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    display: block;
+}
+
+.modoEscuro .lista-receitas a{
+    color: #ff4d6d;
+}
+
+.lista-receitas .texto-simples{
+    color: var(--text-color);
+    font-weight: normal;
+    opacity: 0.8;
+    cursor: default;
+}
